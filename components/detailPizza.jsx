@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, Button } from 'react-native'
 import React from 'react'
 
 
@@ -19,6 +19,7 @@ const DetailPizza = ({navigation, route}) => {
                 })
             }
         </View>
+        <Button title='Retour' onPress={() => navigation.goBack()} />
     </View>
   )
 }

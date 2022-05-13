@@ -22,7 +22,7 @@ function PizzaStack() {
 function ProfilStack() {
   return (
     <Profil.Navigator>
-      <Profil.Screen name='login' component={()=> <Text>Login</Text>} />
+      <Profil.Screen name='login' component={() =><Text>Login</Text>} />
     </Profil.Navigator>
   )
 }
