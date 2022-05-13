@@ -13,5 +13,9 @@
         { "id": 11, "nom": "hawaïenne", "ingredients": [ "jambon", "ananas", "sauce tomate", "mozzarella"], "prix": 12, "imageUrl": "https://www.atelierdeschefs.com/media/recette-e16312-pizza-quatre-saisons.jpg"},
         { "id": 12, "nom": "reine", "ingredients": [ "jambon", "champignons", "sauce tomate", "mozzarella"], "prix": 8, "imageUrl": "https://static.cuisineaz.com/400x320/i96018-pizza-reine.jpg"}
     
+    ],
+    "users": [
+        {"id": 1, "email": "user@ex.com", "password": "user", "pseudo": "user1", "admin": false},
+        {"id": 2, "email": "admin@ex.com", "password": "admin", "pseudo": "admin1", "admin": true}
     ]
 }

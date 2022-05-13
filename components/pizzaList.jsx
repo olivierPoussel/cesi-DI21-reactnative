@@ -10,7 +10,6 @@ const PizzaList = ({navigation}) => {
       fetch('http://192.168.1.11:3000/pizzas')
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setPizzas(data)
           setPizzaView(data)
         })
@@ -20,7 +19,7 @@ const PizzaList = ({navigation}) => {
         navigation.navigate('PizzaDetail', {pizza})
     }
 
-    const handelSearch = () => {
+    const handleSearch = () => {
       // let result = []
       // pizzas.forEach((pizza, index) => {
       //   // console.log(search, pizza.nom, pizza.nom.toLowerCase().includes(search.toLowerCase()))
@@ -52,7 +51,7 @@ const PizzaList = ({navigation}) => {
         value={search}
         onChangeText={setSearch}
       />
-      <Button title='Rechercher' onPress={handelSearch} />
+      <Button title='Rechercher' onPress={handleSearch} />
 
       <FlatList
         data={pizzaView}

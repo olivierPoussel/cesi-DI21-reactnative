@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PizzaList from './components/pizzaList';
 import DetailPizza from './components/detailPizza';
+import Login from './components/login';
+import { getData, USER_KEY } from './service/storageService';
+import Register from './components/register';
 
 const Stack = createNativeStackNavigator();
 const Profil = createNativeStackNavigator();
@@ -21,12 +24,15 @@ function PizzaStack() {
 
 function ProfilStack() {
   return (
-    <Profil.Navigator>
-      <Profil.Screen name='login' component={() =><Text>Login</Text>} />
+    <Profil.Navigator initialRouteName='register'>
+      <Profil.Screen name='register' component={Register} />
+      <Profil.Screen name='login' component={Login} />
     </Profil.Navigator>
   )
 }
 
+
+getData(USER_KEY).then((data) => console.log(data))
 
 export default function App() {
   return (
